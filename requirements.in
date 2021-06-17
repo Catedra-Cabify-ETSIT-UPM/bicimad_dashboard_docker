@@ -1,0 +1,8 @@
+dash
+geopy
+gunicorn
+networkx
+numpy
+pandas
+plotly
+scipy
