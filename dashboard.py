@@ -36,7 +36,13 @@ indexes_month = pickle.load(open("data/dashboard/indexes_month.p", "rb"))
 graphs_month = pickle.load(open("data/dashboard/graphs_month.p", "rb"))
 
 # Build App
-app = dash.Dash(__name__, url_base_pathname="/dashboard/")
+app = dash.Dash(__name__)
+app.config.update(
+    {
+        "routes_pathname_prefix": "",
+        "requests_pathname_prefix": "",
+    }
+)
 server = app.server
 
 node_size = "pagerank"  # One of "pagerank", "degree", "in_degree", "out_degree"...
