@@ -39,8 +39,8 @@ graphs_month = pickle.load(open("data/dashboard/graphs_month.p", "rb"))
 app = dash.Dash(__name__)
 app.config.update(
     {
-        "routes_pathname_prefix": "/bicimad/",
-        # "requests_pathname_prefix": "",
+        "routes_pathname_prefix": "",
+        "requests_pathname_prefix": "/bicimad/",
     }
 )
 server = app.server
